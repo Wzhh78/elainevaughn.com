@@ -1,0 +1,116 @@
+/* --- 全局样式 --- */
+body { 
+    font-family: 'Georgia', serif; 
+    line-height: 1.8; 
+    color: #333; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #ffffff;
+}
+
+/* --- Banner 部分 --- */
+.hero { 
+    height: 400px; 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; /* 标题靠右 */
+    justify-content: center; 
+    padding-right: 10%; 
+    text-align: right; 
+    margin-bottom: 40px; 
+}
+
+/* 标题：双行显示，缩小字体，增加文字阴影保证金色背景下清晰 */
+.hero-title { 
+    font-size: 2.2em; 
+    line-height: 1.2; 
+    margin: 0; 
+    color: #D4AF37; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); 
+}
+
+/* Slogan：缩小字体，高对比度设置 */
+.slogan { 
+    font-size: 1em; 
+    margin-top: 15px; 
+    max-width: 60%; 
+    color: #FFFDD0; 
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.9); 
+    font-style: italic;
+}
+
+/* --- 内容布局 --- */
+.flex-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+    margin-bottom: 60px; 
+}
+
+.flex-item { flex: 1; }
+
+.main-img { 
+    width: 100%; 
+    border: 10px solid #fff; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+
+/* --- 画廊展示 --- */
+.gallery { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin: 30px 0; 
+}
+
+.gallery img { 
+    width: 100%; 
+    height: auto;
+    border: 1px solid #eee; 
+}
+
+/* --- 按钮与交互 --- */
+.btn { 
+    display: inline-block; 
+    padding: 12px 25px; 
+    background: #2c3e50; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 2px; 
+    transition: 0.3s; 
+}
+
+.btn:hover { background: #34495e; }
+
+/* --- Melody 模块 --- */
+.song-list { 
+    margin-top: 20px; 
+    padding: 20px; 
+    background: #f9f9f9; 
+    border-left: 5px solid #D4AF37; 
+}
+
+nav { 
+    text-align: center; 
+    margin-bottom: 50px; 
+    font-weight: bold; 
+    font-size: 1.1em; 
+}
+
+footer { 
+    text-align: center; 
+    margin-top: 50px; 
+    border-top: 1px solid #ddd; 
+    padding-top: 20px; 
+    font-size: 0.9em; 
+}
+
+/* --- 响应式适配 --- */
+@media (max-width: 768px) {
+    .flex-container { flex-direction: column; text-align: center; }
+    .hero { align-items: center; padding-right: 0; text-align: center; }
+    .hero-title, .slogan { max-width: 90%; text-align: center; }
+}
